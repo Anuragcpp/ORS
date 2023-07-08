@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React from 'react';
+import Homepage from './components/HomePage';
+import Login from './components/Login';
+import Register from './components/Register';
+import CandidateSearch from './components/CandidateSearch';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <Routes>
+        <Route exact path="/" component={HomePage} /> */}
+        {/* <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
+        <Route path="/candidate-search" component={CandidateSearch} />
+        <Route component={NotFound} /> */}
+      {/* </Routes> */}
+      {/* <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<Homepage/>}>
+          <Route exact path="Login" element={<Login/>} />
+          <Route exact path="Register" element={<Register/>} />
+          <Route exact path="CandidateSearch" element={<CandidateSearch/>} />
+        </Route>
+      </Routes>
+    </BrowserRouter> */}
+
+<BrowserRouter>
+      
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Register" element={<Register />} />
+        <Route path="/CandidateSearch" element={<CandidateSearch />} />
+      </Routes>
+      
+    </BrowserRouter>
+      
+      
+      
+      
     </div>
   );
-}
+};
 
 export default App;
